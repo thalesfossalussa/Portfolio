@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
     <div class="container-fluid">
         <img src="img/perfil-circle.png" class="me-1" alt="Bootstrap" width="30" height="30">
         <a class="navbar-brand" href="index.html">Thales Fossalussa Portfólio</a>
@@ -8,27 +8,63 @@
         <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" id="home" aria-current="page" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="sobre.html">Sobre mim</a>
+                    <a class="nav-link" id="sobre" href="sobre.html">Sobre mim</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="formacao.html">Formação</a>
+                    <a class="nav-link" id="formacao" href="formacao.html">Formação</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="profissional.html">Atuação profissional</a>
+                    <a class="nav-link" id="atuacaoProfissional" href="profissional.html">Atuação profissional</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contato.html">Contato</a>
+                    <a class="nav-link" id="contato" href="contato.html">Contato</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Portfolio.html">Portfólio</a>
+                    <a class="nav-link" id="portfolio" href="Portfolio.html">Portfólio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="tecnologia.html">Tecnologias</a>
+                    <a class="nav-link" id="tecnologias" href="tecnologia.html">Tecnologias</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+<script>
+    pagina = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+    
+    switch (pagina) {
+        case "index.html":
+            $("#home").addClass("active");
+            break;
+
+        case "sobre.html":
+            $("#sobre").addClass("active");
+            break;
+
+        case "formacao.html":
+            $("#formacao").addClass("active");
+            break;
+            
+        case "profissional.html":
+            $("#atuacaoProfissional").addClass("active");
+            break;
+    
+        case "contato.html":
+            $("#contato").addClass("active");
+            break;
+            
+        case "portfolio.html":
+            $("#portfolio").addClass("active");
+            break;
+    
+        case "tecnologias.html":
+            $("#tecnologias").addClass("active");
+            break;
+
+        default:
+            break;
+    }
+</script>
