@@ -1,0 +1,28 @@
+.index-header-img {
+    background-image: url("../img/coding-on-laptop-opacidade.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:300px;
+}
+
+.corrigindo-cabecalho {
+    height: 56px;
+}
+
+.bg-color-primary{
+    background-color: var(--bs-gray-900);
+    height: 500px;
+}
+
+.bg-color-secondary {
+    background-color: var(--bs-gray-300);
+    height: 500px;
+}
+
+section.container-fluid.bg-color-primary.text-primary {
+    color: var(--bs-gray-300) !important;
+}
+
+section.container-fluid.bg-color-secondary.text-secondary {
+    color: var(--bs-gray-800) !important;
+}
