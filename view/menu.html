@@ -1,8 +1,11 @@
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
     <div class="container-fluid">
-        <img src="img/perfil-circle.png" class="me-1" alt="Bootstrap" width="30" height="30">
-        <a class="navbar-brand" href="index.html">Thales Fossalussa</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/perfil-circle.png" class="me-1" alt="Bootstrap" width="30" height="30">
+            Thales Fossalussa
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
@@ -17,7 +20,8 @@
                     <a class="nav-link" id="formacaoHeader" aria-current="page" href="formacao.html">Formação</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="atuacaoProfissionalHeader" aria-current="page" href="profissional.html">Atuação profissional</a>
+                    <a class="nav-link" id="atuacaoProfissionalHeader" aria-current="page"
+                        href="profissional.html">Atuação profissional</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="contatoHeader" aria-current="page" href="contato.html">Contato</a>
@@ -26,7 +30,8 @@
                     <a class="nav-link" id="portfolioHeader" aria-current="page" href="Portfolio.html">Portfólio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="tecnologiasHeader" aria-current="page" href="tecnologias.html">Tecnologias</a>
+                    <a class="nav-link" id="tecnologiasHeader" aria-current="page"
+                        href="tecnologias.html">Tecnologias</a>
                 </li>
             </ul>
         </div>
@@ -34,7 +39,7 @@
 </nav>
 <script>
     pagina = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
-    
+
     switch (pagina) {
         case "index.html":
             $("#homeHeader").addClass("active");
@@ -47,19 +52,19 @@
         case "formacao.html":
             $("#formacaoHeader").addClass("active");
             break;
-            
+
         case "profissional.html":
             $("#atuacaoProfissionalHeader").addClass("active");
             break;
-    
+
         case "contato.html":
             $("#contatoHeader").addClass("active");
             break;
-            
+
         case "Portfolio.html":
             $("#portfolioHeader").addClass("active");
             break;
-    
+
         case "tecnologias.html":
             $("#tecnologiasHeader").addClass("active");
             break;
