@@ -6,18 +6,170 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+	<!-- Bootstrap -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<!-- Bootstrap Icon -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+
+	<!-- Font Awesome Kit -->
+	<script src="https://kit.fontawesome.com/1de6837a13.js" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body>
+<body onload="carregarModelos();">
+
+	<my-header>
+		<!-- view/menu.html -->
+	</my-header>
+
+	<div class="corrigindo-cabecalho"></div>
+	<!-- Conteúdo principal -->
+	<main>
+		<section class="container-fluid index-header-img ">
+			<header class="container text-center w-75 h-100">
+				<div class="row align-items-center pt-3 h-100">
+					<div class="col">
+						<h2>Tecnologias</h2>
+					</div>
+				</div>
+			</header>
+		</section>
+
+		<section id="html" class="container-fluid bg-color-primary text-primary">
+			<div class="container text-center w-75 h-100">
+				<div class="row align-items-center pt-4 h-100">
+					<div class="col">
+						<h2>HTML</h2>
+					</div>
+				</div>
+				<div class="row align-items-center pt-4 h-100">
+					<div class="col">
+						<i class="fa-brands fa-html5 fa-5x"></i>
+					</div>
+				</div>
+				<main class="row align-items-center pt-4 h-100">
+					<div class="col">
+						<p>
+							Seu nome tem origem do inglês <span class="badge bg-white border-white text-black">Hyper
+								Text Markup Language</span> que
+							significa “linguagem de
+							marcação de hipertexto”.
+						</p>
+						<p>
+							Os hipertextos são conjuntos de elementos conectados. Esses podem ser palavras, imagens,
+							vídeos, documento, etc. Quando conectados, formam uma rede de informações que permite a
+							comunicação de dados, organizando conhecimentos e guardando informações.
+						</p>
+						<p>
+							Imagine uma página web, como essa mesmo que você esta lendo agora. É possível perceber que
+							existem diversos elementos separados, como cabeçalho, título, parágrafos, imagens e muitos
+							outros. Toda a organização desses elementos é feita pelo HTML. Ele é utilizado para criar
+							toda a estrutura da página e, para isso, utiliza as famosas tags (etiquetas) para sinalizar
+							onde cada tipo de elemento será implementado.
+						</p>
+					</div>
+				</main>
+				<section class="row align-items-center py-4 h-100">
+					<div class="col-6 text-start">
+						<h4 class="ps-4">Pros</h4>
+						<ul class="list-unstyled">
+							<li><i class="fa-solid fa-check py-1"></i> Fácil de usar, fácil de escrever e fácil
+								codificar</li>
+							<li><i class="fa-solid fa-check py-1"></i> Permite o uso de modelos, o que facilita o design
+								de uma página da web</li>
+							<li><i class="fa-solid fa-check py-1"></i> Muito útil para iniciantes no campo de web design
+							</li>
+							<li><i class="fa-solid fa-check py-1"></i> Suportado em quase todos os navegadores, se não
+								em todos os navegadores</li>
+							<li><i class="fa-solid fa-check py-1"></i> Fácil de aprender e codificar, mesmo para
+								programadores iniciantes</li>
+						</ul>
+					</div>
+					<div class="col-6 text-start">
+						<h4 class="ps-4">Contras</h4>
+						<ul class="list-unstyled">
+							<li><i class="fa-solid fa-circle-xmark py-1"></i> Ele não pode produzir saída dinâmica
+								sozinho, pois é uma linguagem estática</li>
+							<li><i class="fa-solid fa-circle-xmark py-1"></i> As vezes, é difícil entender a
+								estruturação de documentos HTML</li>
+							<li><i class="fa-solid fa-circle-xmark py-1"></i> Ele pode criar apenas páginas estáticas e
+								simples. Se precisarmos de páginas dinâmicas, o HTML não será útil</li>
+							<li><i class="fa-solid fa-circle-xmark py-1"></i> Precisa escrever muito código para criar
+								uma página da web simples</li>
+							<li><i class="fa-solid fa-circle-xmark py-1"></i> Outras linguagens precisam ser aprendidas
+								para estilização da página, como CSS e JavaScript</li>
+						</ul>
+					</div>
+				</section>
+				<section class="row align-items-center py-4 h-100 g-4">
+					<h4 class="pb-4">Grandes sites escritos com HTML5</h4>
+					<div class="col-4">
+						<div class="card text-black">
+							<img src="img/mula-design.jpg" class="card-img-top">
+							<div class="card-body">
+								<h5 class="card-title mb-3">Mula Design</h5>
+								<a href="https://lab.4muladesign.com/dribbble/"
+									class="btn btn-primary bg-dark border-dark">Visitar!</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="card text-black">
+							<img src="img/digital-hands.jpg" class="card-img-top">
+							<div class="card-body">
+								<h5 class="card-title mb-3">Digital Hands</h5>
+								<a href="http://www.digitalhands.net/"
+									class="btn btn-primary bg-dark border-dark">Visitar!</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="card text-black">
+							<img src="img/ivan-asetiawan.jpg" class="card-img-top">
+							<div class="card-body">
+								<h5 class="card-title mb-3">Ivana Setiwan</h5>
+								<a href="https://ivanasetiawan.com/"
+									class="btn btn-primary bg-dark border-dark">Visitar!</a>
+							</div>
+						</div>
+					</div>
+
+				</section>
+				<section class="row align-items-center py-4 h-100">
+					<div class="col">
+						<a class="btn btn-primary bg-white text-black border-white" href="https://html5.org/"
+							role="button">Saiba mais</a>
+					</div>
+				</section>
+			</div>
+		</section>
+
+
+	</main>
+	<!-- /Conteúdo principal -->
+
+	<my-footer>
+		<!-- view/footer.html -->
+	</my-footer>
 
 	<!-- Bootstrap JavaScript Libraries -->
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+		integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+		integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+		crossorigin="anonymous"></script>
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+	<!-- Meus Scripts -->
+	<script src="js/javascript.js"></script>
 </body>
 
 </html>
