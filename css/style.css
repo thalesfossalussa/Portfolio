@@ -1,6 +1,7 @@
 .fundo-img {
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height:300px;
 }
 
@@ -10,12 +11,12 @@
 
 .bg-color-primary{
     background-color: var(--bs-gray-900);
-    min-height: 500px;
+    min-height: 300px;
 }
 
 .bg-color-secondary {
     background-color: var(--bs-gray-300);
-    min-height: 500px;
+    min-height: 300px;
 }
 
 section.container-fluid.bg-color-primary.text-primary {
