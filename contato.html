@@ -74,27 +74,27 @@
 					<div class="col">
 						<div class="row align-items-center pt-4 h-100">
 							<h4 class="text-center mb-3">Envie uma mensagem!</h4>
-							<form method="GET">
+							<form id="form">
 								<div class="mb-3 row">
 									<fieldset class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-										<label for="txt_nome" class="col-form-label">Nome</label>
+										<label for="txt_nome" class="col-form-label">Nome <span class="text-danger">*</span></label>
 										<input type="text" class="form-control" name="txt_nome" id="txt_nome"
-											placeholder="Nome">
+											placeholder="Nome" required>
 									</fieldset>
 									<fieldset class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-										<label for="txt_assunto" class="col-form-label">Assunto</label>
+										<label for="txt_assunto" class="col-form-label">Assunto <span class="text-danger">*</span></label>
 										<input type="text" class="form-control" name="txt_assunto" id="txt_assunto"
-											placeholder="Assunto">
+											placeholder="Assunto" required>
 									</fieldset>
 									<fieldset>
-										<label class="col col-form-label" for="txt_email">Email</label>
+										<label class="col col-form-label" for="txt_email">Email <span class="text-danger">*</span></label>
 										<input class="form-control" type="email" name="txt_email" id="txt_email"
-											placeholder="nome@gmail.com">
+											placeholder="nome@gmail.com" required>
 									</fieldset>
 									<fieldset>
-										<label for="txt_mensagem" class="col col-form-label">Mensagem:</label>
+										<label for="txt_mensagem" class="col col-form-label">Mensagem <span class="text-danger">*</span></label>
 										<textarea class="form-control" rows="5" placeholder="Digite sua mensagem aqui!"
-											1 id="txt_mensagem" name="txt_mensagem"></textarea>
+											1 id="txt_mensagem" name="txt_mensagem" required></textarea>
 									</fieldset>
 								</div>
 								<div class="mb-3 row">
@@ -129,6 +129,7 @@
 
 	<!-- Meus Scripts -->
 	<script src="js/javascript.js"></script>
+	<script src="js/mensagens.js"></script>
 </body>
 
 </html>
