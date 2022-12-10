@@ -17,7 +17,7 @@ function semMensagens () {
     const text = document.createElement("h2")
     text.classList.add("text-center")
     
-    text.innerText = "Você ainda não tem mensagens, por favor volte mais tarde!"
+    text.innerText = "Sua caixa de entrada está limpa, por favor volte mais tarde!"
     row.appendChild(text)
     container.appendChild(row)
 }
