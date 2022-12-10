@@ -3,20 +3,20 @@ const mensagensRecebidas = JSON.parse(localStorage.getItem("mensagensRecebidas")
 
 
 // Verificando se há mensagens no local Storage
-function semMensagens () {
+function semMensagens() {
     const container = document.getElementById("container")
-    
-    container.innerHTML = ""   
+
+    container.innerHTML = ""
 
     const row = document.createElement("div")
     row.classList.add("row")
     row.classList.add("py-2")
     row.classList.add("align-items-center")
     row.style.minHeight = "300px"
-    
+
     const text = document.createElement("h2")
     text.classList.add("text-center")
-    
+
     text.innerText = "Sua caixa de entrada está limpa, por favor volte mais tarde!"
     row.appendChild(text)
     container.appendChild(row)
@@ -36,28 +36,28 @@ if ($("#form").length) {
         evento.preventDefault()
 
         const novaMensagem = {
-        "nome": evento.target.elements["txt_nome"].value,
-        "assunto": evento.target.elements["txt_assunto"].value,
-        "email": evento.target.elements["txt_email"].value,
-        "texto": evento.target.elements["txt_mensagem"].value
+            "nome": evento.target.elements["txt_nome"].value,
+            "assunto": evento.target.elements["txt_assunto"].value,
+            "email": evento.target.elements["txt_email"].value,
+            "texto": evento.target.elements["txt_mensagem"].value
         }
-        
+
         mensagensRecebidas.push(novaMensagem)
-        
+
         localStorage.setItem("mensagensRecebidas", JSON.stringify(mensagensRecebidas))
 
         evento.target.elements["txt_nome"].value = ""
         evento.target.elements["txt_assunto"].value = ""
         evento.target.elements["txt_email"].value = ""
         evento.target.elements["txt_mensagem"].value = ""
-        
+
         // TODO: retornar que a mensagem foi enviada com sucesso ou sem sucesso
     })
 }
 
 // Carregar lista de mensagens com LocalStorage
 if ($("#listaMensagens").length) {
-    function criarCardMensagem (mensagem) {
+    function criarCardMensagem(mensagem) {
         //Criando elementos HTML que formarão a mensagem
         // DUVIDAS: Existe uma maneira mais simples de escrever esse código abaixo?
         const mensagemRow = document.createElement("div")
@@ -92,12 +92,12 @@ if ($("#listaMensagens").length) {
         mensagemCardBody.appendChild(mensagemNome)
         mensagemCardBody.appendChild(mensagemEmail)
         mensagemCardBody.appendChild(mensagemTexto)
-        
-        
+
+
         mensagemCard.appendChild(mensagemCardBody)
         mensagemCol.appendChild(mensagemCard)
         mensagemRow.appendChild(mensagemCol)
-        
+
         console.log(mensagemRow)
         listaMensagens.appendChild(mensagemRow)
     }
@@ -107,7 +107,7 @@ if ($("#listaMensagens").length) {
             criarCardMensagem(mensagem)
         });
     }
-    
+
 }
 
 if (!localStorage.getItem("mensagensRecebidas")) semMensagens()
