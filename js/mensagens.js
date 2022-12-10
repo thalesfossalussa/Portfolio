@@ -2,6 +2,34 @@ const listaMensagens = document.getElementById("listaMensagens")
 const mensagensRecebidas = JSON.parse(localStorage.getItem("mensagensRecebidas")) || []
 
 
+// Verificando se há mensagens no local Storage
+function semMensagens () {
+    const container = document.getElementById("container")
+    
+    container.innerHTML = ""   
+
+    const row = document.createElement("div")
+    row.classList.add("row")
+    row.classList.add("py-2")
+    row.classList.add("align-items-center")
+    row.style.minHeight = "300px"
+    
+    const text = document.createElement("h2")
+    text.classList.add("text-center")
+    
+    text.innerText = "Você ainda não tem mensagens, por favor volte mais tarde!"
+    row.appendChild(text)
+    container.appendChild(row)
+}
+
+function limparMensagens() {
+    //TODO: ao limpar as mensagens, apresentar um card mencionando que ainda não temos mensagens
+    localStorage.clear()
+
+    listaMensagens.remove()
+    semMensagens()
+}
+
 if ($("#form").length) {
     const form = document.getElementById("form")
     form.addEventListener("submit", (evento) => {
@@ -83,33 +111,4 @@ if ($("#listaMensagens").length) {
     
 }
 
-
-function limparMensagens() {
-    //TODO: ao limpar as mensagens, apresentar um card mencionando que ainda não temos mensagens
-    localStorage.clear()
-
-    listaMensagens.remove()
-    }
-    
-// Verificando se há mensagens no local Storage
-if (!localStorage.getItem("mensagensRecebidas")) {
-
-    const container = document.getElementById("container")
-    
-    container.innerHTML = ""   
-
-    const row = document.createElement("div")
-    row.classList.add("row")
-    row.classList.add("py-2")
-    row.classList.add("align-items-center")
-    row.style.minHeight = "300px"
-
-    const text = document.createElement("h2")
-    text.classList.add("text-center")
-
-    text.innerText = "Você ainda não tem mensagens, por favor volte mais tarde!"
-    row.appendChild(text)
-    container.appendChild(row)
-
-    console.log(container)
-}
+if (!localStorage.getItem("mensagensRecebidas")) semMensagens()
