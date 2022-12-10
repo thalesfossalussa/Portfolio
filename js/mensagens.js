@@ -23,7 +23,6 @@ function semMensagens () {
 }
 
 function limparMensagens() {
-    //TODO: ao limpar as mensagens, apresentar um card mencionando que ainda não temos mensagens
     localStorage.clear()
 
     listaMensagens.remove()
