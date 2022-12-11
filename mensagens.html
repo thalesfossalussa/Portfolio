@@ -39,7 +39,7 @@
 			<div class="container w-75 h-100" id="container">
 				<div class="row py-2 align-items-center">
 					<div class="col-auto mx-auto">
-						<button type="button" onclick="limparMensagens()"
+						<button type="button" data-bs-toggle="modal" data-bs-target="#abrirModalConfirmacao"
 							class="btn btn-primary bg-dark border-dark">Limpar tudo</button>
 					</div>
 				</div>
@@ -48,8 +48,33 @@
 				</section>
 				<div class="row py-2">
 					<div class="col-auto mx-auto">
-						<button type="button" onclick="limparMensagens()"
+						<button type="button" data-bs-toggle="modal" data-bs-target="#abrirModalConfirmacao"
 							class="btn btn-primary bg-dark border-dark">Limpar tudo</button>
+					</div>
+				</div>
+
+				<!-- Modal -->
+				<div class="modal fade" id="abrirModalConfirmacao" tabindex="-1" aria-labelledby="modalConfirmacao"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h1 class="modal-title fs-5" id="modalConfirmacao">Atenção!</h1>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<p>
+									Tem certeza que deseja apagar todas as mensagens? (esse caminho não tem volta)
+								</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-white border-dark"
+									data-bs-dismiss="modal">Cancelar</button>
+								<button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+									onclick="limparMensagens()">Apagar tudo</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
