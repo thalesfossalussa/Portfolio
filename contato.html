@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="pt-br">
-
+<!-- TODO: Desativar mensagem sucesso quando começar a escrever novamente o fomulário -->
 <head>
 	<title>Contato | Thales Fossalussa</title>
 	<meta charset="utf-8">
@@ -80,28 +80,38 @@
 										<label for="txt_nome" class="col-form-label">Nome <span
 												class="text-danger">*</span></label>
 										<input type="text" class="form-control" name="txt_nome" id="txt_nome"
-											placeholder="Nome" required>
+											placeholder="Nome" autocomplete="on" required oninvalid="nomeInvalido()"
+											oninput="limpaErroNome()"">
+											<p class=" text-danger mb-0 d-none" id="nomeErro">Campo obrigatório</p>
 									</fieldset>
 									<fieldset class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
 										<label for="txt_assunto" class="col-form-label">Assunto <span
 												class="text-danger">*</span></label>
 										<input type="text" class="form-control" name="txt_assunto" id="txt_assunto"
-											placeholder="Assunto" required>
+											placeholder="Assunto" required oninvalid="assuntoInvalido()"
+											oninput="limpaErroAssunto()">
+										<p class="text-danger mb-0 d-none" id="assuntoErro">Campo obrigatório</p>
 									</fieldset>
 									<fieldset>
 										<label class="col col-form-label" for="txt_email">Email <span
 												class="text-danger">*</span></label>
 										<input class="form-control" type="email" name="txt_email" id="txt_email"
-											placeholder="nome@gmail.com" required>
+											placeholder="nome@gmail.com" autocomplete="on" required
+											oninvalid="emailInvalido()" oninput="limpaErroEmail()">
+										<p class="text-danger mb-0 d-none" id="emailErro">Email inválido</p>
 									</fieldset>
 									<fieldset>
 										<label for="txt_mensagem" class="col col-form-label">Mensagem <span
 												class="text-danger">*</span></label>
 										<textarea class="form-control" rows="5" placeholder="Digite sua mensagem aqui!"
-											1 id="txt_mensagem" name="txt_mensagem" required></textarea>
+											1 id="txt_mensagem" name="txt_mensagem" required
+											oninvalid="mensagemInvalido()" oninput="limpaErroMensagem()"></textarea>
+										<p class="text-danger mb-0 d-none" id="mensagemErro">Favor inserir sua mensagem
+										</p>
 									</fieldset>
 								</div>
 								<div class="mb-3 row" id="finalDoForm">
+									<h5 class="text-center py-2 d-none" id="mensagemSucesso">Sua mensagem foi enviada com sucesso!</h5>
 									<div class="col-auto mx-auto">
 										<button type="submit"
 											class="btn btn-primary bg-dark border-dark">Enviar!</button>
@@ -133,7 +143,7 @@
 
 	<!-- Meus Scripts -->
 	<script src="js/javascript.js"></script>
-	<script src="js/mensagens.js"></script>
+	<script src="js/contato.js"></script>
 </body>
 
 </html>

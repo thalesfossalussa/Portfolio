@@ -1,13 +1,13 @@
 const listaMensagens = document.getElementById("listaMensagens")
 const mensagensRecebidas = JSON.parse(localStorage.getItem("mensagensRecebidas")) || []
 
-
 // Verificando se há mensagens no local Storage
 function semMensagens() {
     const container = document.getElementById("container")
 
     container.innerHTML = ""
 
+    // DUVIDAS: Criar o elemento HTML via javascript ou escrever o documento em HTML com display: none
     const row = document.createElement("div")
     row.classList.add("row")
     row.classList.add("py-2")
@@ -27,39 +27,6 @@ function limparMensagens() {
 
     listaMensagens.remove()
     semMensagens()
-}
-
-if ($("#form").length) {
-    const form = document.getElementById("form")
-    const finalDoForm = document.getElementById("finalDoForm")
-    form.addEventListener("submit", (evento) => {
-        // DUVIDAS: entre usar um var form aqui ou const form no ínicio do arquivo
-        evento.preventDefault()
-
-        const novaMensagem = {
-            "nome": evento.target.elements["txt_nome"].value,
-            "assunto": evento.target.elements["txt_assunto"].value,
-            "email": evento.target.elements["txt_email"].value,
-            "texto": evento.target.elements["txt_mensagem"].value
-        }
-
-        mensagensRecebidas.push(novaMensagem)
-
-        localStorage.setItem("mensagensRecebidas", JSON.stringify(mensagensRecebidas))
-
-        // Limpando o form
-        evento.target.elements["txt_nome"].value = ""
-        evento.target.elements["txt_assunto"].value = ""
-        evento.target.elements["txt_email"].value = ""
-        evento.target.elements["txt_mensagem"].value = ""
-
-        // Informando ao usuário qu foi um sucesso
-        textoSucesso = document.createElement("h6")
-        textoSucesso.classList.add("text-center")
-        textoSucesso.classList.add("pt-2")
-        textoSucesso.innerText = "Sua mensagem foi enviada com sucesso!"
-        finalDoForm.appendChild(textoSucesso)
-    })
 }
 
 // Carregar lista de mensagens com LocalStorage
