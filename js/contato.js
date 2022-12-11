@@ -1,5 +1,13 @@
 const form = document.getElementById("form")
 
+function limpaMensagemSucesso() {
+    const mensagemSucesso = document.getElementById("mensagemSucesso")
+
+    if (!mensagemSucesso.classList.contains("d-none")) {
+        mensagemSucesso.classList.add("d-none")
+    }
+}
+
 function nomeInvalido() {
     const nomeErro = document.getElementById("nomeErro")
     nomeErro.classList.remove("d-none")
@@ -8,6 +16,7 @@ function nomeInvalido() {
 function limpaErroNome() {
     const nomeErro = document.getElementById("nomeErro")
     nomeErro.classList.add("d-none")
+    limpaMensagemSucesso()
 }
 
 function assuntoInvalido() {
@@ -18,6 +27,7 @@ function assuntoInvalido() {
 function limpaErroAssunto() {
     const assuntoErro = document.getElementById("assuntoErro")
     assuntoErro.classList.add("d-none")
+    limpaMensagemSucesso()
 }
 
 function emailInvalido() {
@@ -28,6 +38,7 @@ function emailInvalido() {
 function limpaErroEmail() {
     const emailErro = document.getElementById("emailErro")
     emailErro.classList.add("d-none")
+    limpaMensagemSucesso()
 }
 
 function mensagemInvalido() {
@@ -38,6 +49,7 @@ function mensagemInvalido() {
 function limpaErroMensagem() {
     const mensagemErro = document.getElementById("mensagemErro")
     mensagemErro.classList.add("d-none")
+    limpaMensagemSucesso()
 }
 
 form.addEventListener("submit", (evento) => {
