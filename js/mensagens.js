@@ -31,6 +31,7 @@ function limparMensagens() {
 
 if ($("#form").length) {
     const form = document.getElementById("form")
+    const finalDoForm = document.getElementById("finalDoForm")
     form.addEventListener("submit", (evento) => {
         // DUVIDAS: entre usar um var form aqui ou const form no ínicio do arquivo
         evento.preventDefault()
@@ -46,12 +47,18 @@ if ($("#form").length) {
 
         localStorage.setItem("mensagensRecebidas", JSON.stringify(mensagensRecebidas))
 
+        // Limpando o form
         evento.target.elements["txt_nome"].value = ""
         evento.target.elements["txt_assunto"].value = ""
         evento.target.elements["txt_email"].value = ""
         evento.target.elements["txt_mensagem"].value = ""
 
-        // TODO: retornar que a mensagem foi enviada com sucesso ou sem sucesso
+        // Informando ao usuário qu foi um sucesso
+        textoSucesso = document.createElement("h6")
+        textoSucesso.classList.add("text-center")
+        textoSucesso.classList.add("pt-2")
+        textoSucesso.innerText = "Sua mensagem foi enviada com sucesso!"
+        finalDoForm.appendChild(textoSucesso)
     })
 }
 
