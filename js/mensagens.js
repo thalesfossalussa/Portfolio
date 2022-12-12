@@ -7,7 +7,6 @@ function semMensagens() {
 
     container.innerHTML = ""
 
-    // DUVIDAS: Criar o elemento HTML via javascript ou escrever o documento em HTML com display: none
     const row = document.createElement("div")
     row.classList.add("row")
     row.classList.add("py-2")
@@ -33,7 +32,6 @@ function limparMensagens() {
 if ($("#listaMensagens").length) {
     function criarCardMensagem(mensagem) {
         //Criando elementos HTML que formarão a mensagem
-        // DUVIDAS: Existe uma maneira mais simples de escrever esse código abaixo?
         const mensagemRow = document.createElement("div")
         const mensagemCol = document.createElement("div")
         const mensagemCard = document.createElement("div")
